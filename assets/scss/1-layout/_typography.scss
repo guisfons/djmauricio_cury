@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+$Gotham-Bold: 'GothamRounded-bold', sans-serif;
+$Gotham-Book: 'GothamRounded-book', sans-serif;
+$Gotham-Light: 'GothamRounded-light', sans-serif;
+$Gotham-Medium: 'GothamRounded-medium', sans-serif;
+$font-menu: 'Oswald', sans-serif;
+
+body{
+    font-family: $Gotham-Book;
+}
+
+@font-face{
+    font-family: 'GothamRounded-bold', sans-serif;
+    src: url('../../fonts/GothamRounded-Bold.otf');
+}
+
+@font-face{
+    font-family: 'GothamRounded-book', sans-serif;
+    src: url('../../fonts/GothamRounded-Book.otf');
+}
+
+@font-face{
+    font-family: 'GothamRounded-light', sans-serif;
+    src: url('../../fonts/GothamRounded-Light.otf');
+}
+
+@font-face{
+    font-family: 'GothamRounded-medium', sans-serif;
+    src: url('../../fonts/GothamRounded-Medium.otf');
+}

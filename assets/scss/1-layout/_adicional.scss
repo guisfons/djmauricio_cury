@@ -1,0 +1,19 @@
+//logo instagram - feed
+.crt-grid-post .crt-social-icon {
+    bottom: -20px !important;
+}
+
+@include sxs{
+    .crt-widget div {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .crt-widget-grid.crt-grid-col1 .crt-grid-post{
+        width: 90% !important;
+        z-index: 0 !important;
+    }
+}

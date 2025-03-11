@@ -1,0 +1,21 @@
+{
+    "name": "cliente/tema",
+        "type": "project",
+        "license": "private",
+        "authors": [
+            {
+                "name": "OKN Group",
+                "email": "contato@okngroup.com"
+            }
+        ],
+    "repositories":[
+            {
+                "type":"composer",
+                "url":"https://wpackagist.org"
+            }
+        ],
+    "require": {
+        "php": "^7.3",
+        "symfony/var-dumper": "^5.0"
+    }
+}

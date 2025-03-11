@@ -1,0 +1,368 @@
+.home{
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+    }
+
+    &::after{
+        content: '';
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 20rem;
+        background: rgb(17,17,17);
+        background: linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(0,0,0,0) 100%);
+    }
+
+    &__container{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+
+        @include sxs{
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    }
+
+    &__description{
+        background-color: $almost-black;
+    }
+
+    &__text{
+        max-width: fit-content;
+        width: 100%;
+        // background-color: rgba(43, 43, 43, 0.5);
+        backdrop-filter: blur(.5rem);
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 5rem;
+
+        @include sxs{
+            order: 1;
+            transform: none;
+            z-index: 1;
+        }
+
+        span{
+            &:nth-of-type(1) {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }
+
+            &:nth-of-type(2) {
+                font-size: 2rem;
+                line-height: 2.5rem;
+
+                @include sxs{
+                    line-height: 1.6;
+                    text-align: justify;
+                }
+            }
+        }
+
+        a{
+            width: 15rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $white;
+            border-radius: 5px;
+            margin-top: 2rem;
+            transition: .1s all;
+
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+
+            &:hover{
+                border-width: 3px;
+            }
+
+            @include sxs{
+                margin: 2rem auto 0;
+            }
+        }
+    }
+
+    &__mauricio{
+        max-width: 43rem;
+        width: 100%;
+        height: 75%;
+
+        @media(max-width: 1280px){
+            height: auto;
+        }
+
+        @include sxs{
+            max-width: 60%;
+        }
+
+        object-fit: cover;
+        margin-top: 10rem;
+    }
+}
+
+.biografia{
+    margin: 10rem 0;
+
+    &__container{
+        display: flex;
+        align-items: center;
+
+        @include xs{
+            flex-direction: column;
+        }
+    }
+
+    &__text{
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+        text-align: justify;
+
+        // p{
+        //     margin-bottom: 3rem;
+        // }
+    }
+
+    &__img{
+        height: 50rem;
+        width: 50rem;    
+        margin-left: 10rem;
+
+        & img{
+            height: 50rem;
+            width: 50rem;
+            object-fit: cover;
+
+            @include xs{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @include xs{
+            margin-left: 0;
+            margin-top: 2rem;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.musicas{
+    padding: 10rem 0;
+    background-color: $almost-black;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+
+    &__container{
+        display: flex;
+        justify-content: center;
+
+        @include xs{
+            flex-direction: column;
+        }
+    }
+
+    &__img{
+        max-width: 100%;
+        height: 380px;
+        margin-right: 5rem;
+        object-fit: cover;
+
+        @include xs{
+            margin: 5rem 0 0;
+        }
+    }
+
+    iframe {
+        border: 1px solid #8e4eac;
+
+        @include xs{
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+.insta{
+    margin-top: 10rem;
+
+    &__container{
+        max-width: 92rem;
+        margin-bottom: 12rem;
+
+        div {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            column-gap: 1rem;
+            row-gap: 1rem;
+
+            a {
+                flex: 1 0 100%;
+                max-width: 30rem;
+                height: 30rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    
+    &__link{
+        width: 20rem;
+        display: block;
+        margin: 3rem auto 3rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+.podcast{
+    background-color: $almost-black;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    padding: 10rem 0;
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include xs{
+            flex-direction: column;
+        }
+    }
+
+    iframe{
+        width: 100%;
+        max-width: 66rem;
+        overflow: hidden;
+        border-radius: 10px;
+        background: transparent;
+        border: none;            
+        height: 45rem;
+
+        @include xs{
+            height: 57rem;        
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 31.5rem;
+        margin-left: 2rem;
+
+        @include xs{
+            max-width: 660px;
+            margin-left: 0;
+            margin-top: 3rem;
+        }
+
+        a{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            transition: .1s all;
+            background-color: rgba($color: #0c0c0c, $alpha: 1.0);
+            margin-bottom: 3.5rem;
+            
+            @include xs{
+                margin-bottom: 2rem;
+            }
+
+            &:hover{
+                border-width: 3px;
+            }
+
+            &.apple{
+                &:hover{
+                    background: rgba($color: #000000, $alpha: 1.0);
+                    border-color: $apple;
+                    color: $apple;
+                    svg path{
+                        fill: $apple;
+                    }
+                }
+            }
+            &.deezer{
+                &:hover{
+                    background: rgba($color: #000000, $alpha: 1.0);
+                    border-color: $deezer;
+                    color: $deezer;
+                    svg path{
+                        fill: $deezer;
+                    }
+                }
+            }
+            &.tunein{
+                &:hover{
+                    background: rgba($color: #000000, $alpha: 1.0);
+                    border-color: $tunein;
+                    color: $tunein;
+                    svg g{
+                        fill: $tunein;
+                    }
+                }
+            }
+            &.youtube{
+                &:hover{
+                    background: rgba($color: #000000, $alpha: 1.0);
+                    border-color: $youtube;
+                    color: $youtube;
+                    svg path{
+                        fill: $youtube;
+                    }
+                }
+            }
+            &.castbox{
+                &:hover{
+                    background: rgba($color: #000000, $alpha: 1.0);
+                    border-color: $castbox;
+                    color: $castbox;
+                    svg path{
+                        fill: $castbox; 
+                    }
+                }
+            }
+        }
+
+        svg{
+            max-width: 3.2rem;
+            width: 100%;
+            height: 3.2rem;
+            margin: 1rem;            
+        }
+    }
+}

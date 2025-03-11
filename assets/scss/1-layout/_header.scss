@@ -1,0 +1,109 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-menu;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        margin: 4rem auto;
+        position: relative;
+
+        @include xs{
+            margin: 2rem auto;
+        }
+    }
+
+    &__logo{
+        width: 20rem;
+    }
+
+    &__nav{
+        display: flex;
+        justify-content: flex-end;
+
+        @include xs{
+            align-items: center;
+        }
+
+        @include sxs{
+            visibility: hidden;
+            position: fixed;
+            height: 0px;
+
+            &--active{
+                height: 19.2rem;
+                visibility: visible;
+                right: 2rem;
+                top: 13rem;
+                flex-direction: column;
+                transition: .3s all;
+            }
+        }
+
+        &-btn{
+            display: none;
+            
+            width: 5rem;
+            height: 4rem;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;    
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+
+            span{
+                width: 100%;
+                height: .5rem;
+                background-color: $white;
+                display: block;
+                transition: .3s all;
+            }
+
+            &--active{
+                span{
+                    position: absolute;
+                    top: 50%;
+
+                    &:first-of-type{
+                        transform: translateY(-50%) rotate(45deg);
+                    }
+
+                    &:nth-of-type(2){
+                        visibility: hidden;
+                        opacity: 0;
+                        transform: translateY(-50%);
+                    }
+
+                    &:last-of-type{
+                        transform: translateY(-50%) rotate(-45deg);
+                    }
+                }
+            }
+
+            @include sxs{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+
+        a{
+            text-transform: uppercase;
+            font-size: 2rem;
+            margin: 0 2rem;
+
+            @include sxs{
+                width: 100%;
+                margin: 0.5rem 0;
+                text-align: right;
+            }
+        }
+    }
+}

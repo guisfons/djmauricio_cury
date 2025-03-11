@@ -1,0 +1,57 @@
+/* Base com definições globais */
+
+/* == 1: Responsivo */
+
+$screen-extra-small: 600px;
+$screen-small: 900px;
+$screen-medium: 1024px;
+$screen-large: 1400px;
+
+// Small devices (767px-)
+@mixin sxs {
+    @media (max-width: #{$screen-extra-small}) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width: #{$screen-small}) {
+        @content;
+    }
+}
+
+// Large devices (1024px+)
+@mixin md {
+    @media (max-width: #{$screen-medium}) {
+        @content;
+    }
+}
+
+// Extra large devices (1400px+)
+@mixin lg {
+    @media (max-width: #{$screen-large}) {
+        @content;
+    }
+}
+
+.wrapper{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include lg{
+        max-width: 1280px;
+    }
+
+    @media(max-width: 1280px){
+        max-width: 1152px;
+    }
+
+    @include md{
+        max-width: 900px;
+    }
+
+    @include xs{
+        max-width: 90%;
+    }
+}

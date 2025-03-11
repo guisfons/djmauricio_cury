@@ -1,0 +1,209 @@
+.mixcloud:hover {
+    border-color: #5000FF;
+    color: #5000FF;
+}
+
+.podcast-slider {
+    max-width: 40rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.episode {
+  background-color: #111;
+  padding: 15px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  text-align: center;
+  
+  align-items: center;
+  display: flex !important;
+  flex-direction: column;
+  gap: 1rem;
+}
+.podcast-slider .episode img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.podcast-slider .slick-arrow {
+    font-size: 0;
+    width: 3rem;
+    height: 3rem;
+    aspect-ratio: 1;
+    display: flex;
+    border-color: #eee;
+    border-width: 0.2rem 0.2rem 0 0;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.podcast-slider .slick-arrow.slick-prev {
+    transform: rotate(-135deg);
+}
+
+.podcast-slider .slick-arrow.slick-next {
+    transform: rotate(45deg);
+}
+
+.episode__play {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: .1s all;
+    background-color: #0c0c0c;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.audio-player {
+  height: 50px;
+  width: 100%;
+  background: #444;
+  box-shadow: 0 0 20px 0 #000a;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 0.75em;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 6px auto;
+  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s ease-in-out;
+}
+
+.audio-player .timeline {
+  background: white;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 10px 0 #0008;
+}
+
+.audio-player .timeline .progress {
+  background: coral;
+  width: 0%;
+  height: 100%;
+  transition: 0.25s;
+}
+
+.audio-player .controls {
+  display: flex;
+  align-items: stretch;
+  padding: 0 20px;
+    font-size: 1.5rem;
+    gap: 1rem;
+}
+
+.audio-player .controls > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-player .controls .toggle-play.play {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-left: 13px solid white;
+}
+
+.audio-player .controls .toggle-play.play:hover {
+  transform: scale(1.1);
+}
+
+.audio-player .controls .toggle-play.pause {
+  height: 15px;
+  width: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.audio-player .controls .toggle-play.pause::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  content: "";
+  height: 15px;
+  width: 3px;
+}
+
+.audio-player .controls .toggle-play.pause::after {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  background: white;
+  content: "";
+  height: 15px;
+  width: 3px;
+}
+
+.audio-player .controls .toggle-play.pause:hover {
+  transform: scale(1.1);
+}
+
+.audio-player .controls .time {
+  display: flex;
+}
+
+.audio-player .controls .time > * {
+  padding: 2px;
+}
+
+.audio-player .controls .volume-container {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
+}
+
+.audio-player .controls .volume-container .volume-button {
+  height: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.audio-player .controls .volume-container .volume-button .volume {
+  transform: scale(0.7);
+}
+
+.audio-player .controls .volume-container .volume-slider {
+  position: absolute;
+  left: -3px;
+  top: 15px;
+  z-index: -1;
+  width: 0;
+  height: 15px;
+  background: white;
+  box-shadow: 0 0 20px #000a;
+  transition: 0.25s;
+}
+
+.audio-player .controls .volume-container .volume-slider .volume-percentage {
+  background: coral;
+  height: 100%;
+  width: 75%;
+}
+
+.audio-player .controls .volume-container:hover .volume-slider {
+  left: -123px;
+  width: 120px;
+}

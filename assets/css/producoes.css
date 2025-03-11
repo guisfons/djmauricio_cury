@@ -1,0 +1,21 @@
+.producoes {
+    padding-top: 30rem;
+}
+
+.producoes > article {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    text-align: justify;
+}
+
+.producoes__faixas {
+    margin-top: 5rem;
+}
+
+.producoes__faixas article {
+    margin-bottom: 3rem;
+}
+
+.producoes__faixas article iframe > div {
+    display: none;
+}

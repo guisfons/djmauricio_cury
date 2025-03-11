@@ -1,0 +1,30 @@
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    outline: none;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    height: 100%;
+
+    @media(max-width: 1280px){
+        font-size: 50%;
+    }
+}
+body{
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    transition: 1s all;
+}
+img{
+    max-width: 100%;
+}
+a{
+    color: inherit;
+    text-decoration: none
+}
